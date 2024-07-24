@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #9489bd;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+header .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #20c681;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #404a47;
+    color: #fff;
+}
+.timeline {
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #cbd5e0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 20px;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4299e1;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.timeline li:nth-child(odd) {
+    left: 0;
+}
+
+.timeline li:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline li {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 30px;
+    }
+
+    .timeline li:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline li::before {
+        left: 0;
+        margin-left: 0;
+    }
+}
